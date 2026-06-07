@@ -1,4 +1,4 @@
-# SnapHomz Market Intelligence Platform 🏡📈
+# Market Intelligence Platform 🏡📈
 
 An automated, end-to-end real estate reporting pipeline designed to empower agents with hyperlocal market data. SnapHomz seamlessly integrates live property metrics, Generative AI narratives, and branded PDF generation into a single, cohesive workflow.
 
@@ -6,7 +6,7 @@ An automated, end-to-end real estate reporting pipeline designed to empower agen
 
 Real estate agents need to provide constant value to their clients, but manually pulling data, writing market analyses, and designing branded reports takes hours. 
 
-**SnapHomz** solves this by automating the entire process:
+**We** solves this by automating the entire process:
 1. Pulls live property and market data.
 2. Leverages an LLM to write a personalized, insightful market narrative.
 3. Generates a beautifully styled, co-branded PDF report with the agent's headshot and contact information.
@@ -45,13 +45,8 @@ Follow these steps to set up the environment and generate your first SnapReport.
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/snaphomz.git
-   cd snaphomz
-   ```
 
-2. **Create and activate a virtual environment**
+1. **Create and activate a virtual environment**
    ```bash
    # On Windows
    python -m venv venv
@@ -62,18 +57,18 @@ Follow these steps to set up the environment and generate your first SnapReport.
    source venv/bin/activate
    ```
 
-3. **Install dependencies**
+2. **Install dependencies**
    ```bash
    pip install requests google-genai xhtml2pdf jinja2 python-dotenv
    ```
 
-4. **Configure Environment Variables**
+3. **Configure Environment Variables**
    Create a `.env` file in the root directory and add your Gemini API key:
    ```env
    GEMINI_API_KEY=your_gemini_api_key_here
    ```
 
-5. **Configure Agent Profile**
+4. **Configure Agent Profile**
    Ensure `agent.json` is populated with the target address, agent details, and base64-encoded images for the logo and profile picture.
 
 ### Execution
@@ -82,13 +77,6 @@ Run the main orchestrator script:
 ```bash
 python app.py
 ```
-
-**Output:**
-* The script will print the AI-generated narrative to the console.
-* A beautifully formatted PDF file (e.g., `SnapReport_90210.pdf`) will be instantly generated and saved in the project root.
-
----
-
 ## 💡 Future Enhancements
 * **CRON Scheduling:** Implement automated monthly execution to batch-generate and email reports to an agent's CRM mailing list.
 * **Expanded Metrics:** Integrate a broader Market Trends API to include "Months of Inventory" and "New Listings" at the zip-code level.
